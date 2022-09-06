@@ -30,6 +30,7 @@
     p {
         color: blue;
         margin-left: 25px;
+        margin-top: 10px;
     }
 
     button {
@@ -40,24 +41,25 @@
         border: 1.5px solid dodgerblue;
         cursor: pointer;
     }
-
 </style>
 
 <body>
 <form action="#" method="get">
 <table>
     <tr>
-        <th style="text-align: center;">Amount</th>
-        <th style="text-align: center;">From Currency</th>
+        <th>Amount</th>
+        <th>From Currency</th>
         <th>To Currency</th>
     </tr>
     <tr>
         <td><input type="text" name="amount" id="amount"></td>
-        <td><select name="currency">
-            <option value="VN">VietNam</option>
-        </select></td>
-        <td><select name="USD">
+        <td><select id="opt1" name="currency">
+            <option value="VND">VietNam</option>
             <option value="USD">USD</option>
+        </select></td>
+        <td><select id="opt2" name="USD">
+            <option value="USD">USD</option>
+            <option value="VND">VietNam</option>
         </select></td>
         <td><button onclick="Calc()" type="button">Convert</button></td>
     </tr>
